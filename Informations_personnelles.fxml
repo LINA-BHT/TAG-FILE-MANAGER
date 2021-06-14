@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="466.0" prefWidth="569.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Informations_personnellesController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="information_window" layoutX="5.0" layoutY="1.0" prefHeight="481.0" prefWidth="559.0" style="-fx-background-color: white;" stylesheets="@../Stylesheets/user_favoris.css">
+         <children>
+            <Pane layoutX="14.0" layoutY="20.0" prefHeight="49.0" prefWidth="539.0" style="-fx-background-color: linear-gradient(#B0E0E6 0%, #4682B4 100%);;" styleClass="buttons" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+               <children>
+                  <Label layoutX="61.0" layoutY="13.0" text="Vos Informations personnelle" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="39.0" fitWidth="51.0" layoutX="10.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/img_263400.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="32.0" layoutY="151.0" text="Nom ">
+               <font>
+                  <Font name="Lato Black" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txt_nom" focusColor="BLACK" labelFloat="true" layoutX="103.0" layoutY="141.0" prefHeight="30.0" prefWidth="242.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </JFXTextField>
+            <Button fx:id="btt_valider" layoutX="76.0" layoutY="416.0" mnemonicParsing="false" onMouseClicked="#valide_change" prefHeight="30.0" prefWidth="161.0" styleClass="buttons" text="Valider les modification" />
+            <Button fx:id="btt_mdp" layoutX="345.0" layoutY="416.0" mnemonicParsing="false" onMouseClicked="#fenetre_mdp" prefHeight="30.0" prefWidth="161.0" styleClass="buttons" text="Changer le mot de passe" />
+            <ImageView fitHeight="251.0" fitWidth="230.0" layoutX="329.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/identification-personal-plastic-id-card-empty-template-id-badge-with-clasp-lanyard-illustration-white-background_257312-234.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="24.0" layoutY="212.0" text="Prenom">
+               <font>
+                  <Font name="Lato Black" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txt_prenom" focusColor="BLACK" labelFloat="true" layoutX="95.0" layoutY="203.0" prefHeight="30.0" prefWidth="242.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="32.0" layoutY="276.0" text="Login">
+               <font>
+                  <Font name="Lato Black" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txt_login" focusColor="BLACK" labelFloat="true" layoutX="103.0" layoutY="268.0" prefHeight="30.0" prefWidth="242.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </JFXTextField>
+            <Label fx:id="lbl_id" alignment="TOP_CENTER" layoutX="138.0" layoutY="86.0" prefHeight="23.0" prefWidth="172.0" textAlignment="CENTER">
+               <font>
+                  <Font name="Lato Black" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="344.0" text="Email">
+               <font>
+                  <Font name="Lato Black" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txt_email" focusColor="BLACK" labelFloat="true" layoutX="109.0" layoutY="329.0" prefHeight="30.0" prefWidth="242.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

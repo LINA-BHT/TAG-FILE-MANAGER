@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="481.0" prefWidth="559.0" stylesheets="@../Stylesheets/user_favoris.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Ajouter_fichierController">
+   <children>
+      <Pane layoutX="48.0" layoutY="23.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(#B0E0E6 0%, #4682B4 100%);" styleClass="buttons" AnchorPane.bottomAnchor="417.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <ImageView fitHeight="49.0" fitWidth="55.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/free-favorite-icon-1286-thumb.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="71.0" layoutY="13.0" text="Marquer un nouveaux fichiers /page web comme favoris" textFill="WHITE">
+               <font>
+                  <Font name="Lato Black" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXTextField fx:id="txt_titre" focusColor="BLACK" labelFloat="true" layoutX="16.0" layoutY="120.0" prefHeight="28.0" prefWidth="173.0" promptText="Titre" AnchorPane.bottomAnchor="333.0" AnchorPane.topAnchor="120.0" />
+      <Label layoutX="41.0" layoutY="78.0" text="informations ">
+         <font>
+            <Font name="Lato Black" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_Auteur" labelFloat="true" layoutX="16.0" layoutY="191.0" prefHeight="25.0" prefWidth="173.0" promptText="Auteur" AnchorPane.topAnchor="191.0" />
+      <JFXTextField fx:id="txt_tag" labelFloat="true" layoutX="240.0" layoutY="75.0" prefHeight="38.0" prefWidth="185.0" promptText="Ajouter un tag" AnchorPane.topAnchor="75.0" />
+      <JFXTextArea fx:id="txt_commentaire" labelFloat="true" layoutX="16.0" layoutY="256.0" prefHeight="83.0" prefWidth="185.0" promptText="Commentaire" />
+      <JFXTextArea fx:id="txt_resume" labelFloat="true" layoutX="16.0" layoutY="375.0" prefHeight="83.0" prefWidth="185.0" promptText="Résumer" />
+      <ImageView fx:id="img_dowload" fitHeight="49.0" fitWidth="49.0" layoutX="204.0" layoutY="365.0" onMouseClicked="#dowload_fichiers" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/icon_download.svg.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btt_valider" layoutX="256.0" layoutY="431.0" onAction="#Ajouter_fichiers" prefHeight="38.0" prefWidth="173.0" styleClass="buttons" text="Valider">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lbl_fichier" layoutX="256.0" layoutY="374.0" prefHeight="23.0" prefWidth="171.0" text="Selectionner un fichiers" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="img_annuler" fitHeight="38.0" fitWidth="50.0" layoutX="457.0" layoutY="431.0" onMouseClicked="#Annuler_ajout" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/sup.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="49.0" layoutX="440.0" layoutY="75.0" onMouseClicked="#Ajout_tag" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ajout.png" />
+         </image>
+      </ImageView>
+      <JFXListView fx:id="lidt_tags" layoutX="223.0" layoutY="150.0" prefHeight="159.0" prefWidth="200.0" />
+      <Label layoutX="280.0" layoutY="120.0" text="Listes tags">
+         <font>
+            <Font name="Lato Black" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="28.0" fitWidth="27.0" layoutX="372.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/tag+icon-1320184288185120373.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="433.0" layoutY="228.0" mnemonicParsing="false" onAction="#supprimerTag" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: #c20c0c;" text="Supprimer un tag" textFill="WHITE" />
+      <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="462.0" layoutY="161.0" onMouseClicked="#Ajout_tag" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/supp.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="lbl_nomfichier" fill="#006f07" layoutX="265.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" visible="false" wrappingWidth="133.99999219179153" />
+      <Text fx:id="lbl_emplacementfichier" fill="#006f07" layoutX="425.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" visible="false" wrappingWidth="117.99999219179153" />
+      <RadioButton fx:id="rdd_fichier" layoutX="240.0" layoutY="322.0" mnemonicParsing="false" onAction="#rddfichier_selected" text="fichier" />
+      <RadioButton fx:id="rdd_web" layoutX="385.0" layoutY="321.0" mnemonicParsing="false" onAction="#rdd_webselected" text="page web" />
+      <JFXTextField fx:id="txt_lienweb" layoutX="239.0" layoutY="377.0" prefHeight="25.0" prefWidth="227.0" visible="false" />
+      <Label fx:id="lbl_enterlien" layoutX="239.0" layoutY="360.0" text="Ecrire le lien ici " visible="false" />
+   </children>
+</AnchorPane>

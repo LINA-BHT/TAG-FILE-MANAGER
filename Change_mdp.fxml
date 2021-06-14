@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" fx:id="mdp_window" prefHeight="481.0" prefWidth="559.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Controllers.Change_mdpController">
+   <children>
+      <Pane layoutX="12.0" layoutY="20.0" prefHeight="49.0" prefWidth="539.0" style="-fx-background-color: linear-gradient(#B0E0E6 0%, #4682B4 100%);;" styleClass="buttons" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <Label layoutX="61.0" layoutY="13.0" text="Modifier votre mot depasse" textFill="WHITE">
+               <font>
+                  <Font name="Lato Black" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="39.0" fitWidth="51.0" layoutX="10.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/pass.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="356.0" fitWidth="539.0" layoutX="14.0" layoutY="96.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/background.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="32.0" layoutY="210.0" text="Ancien mot de pase">
+         <font>
+            <Font name="Lato Black" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="270.0" text="Nouveaux mot de pase">
+         <font>
+            <Font name="Lato Black" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="332.0" text="Confirmer votre mot de pase">
+         <font>
+            <Font name="Lato Black" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="112.0" fitWidth="125.0" layoutX="38.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Sample_User_Icon.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btt_confirmer" layoutX="80.0" layoutY="388.0" mnemonicParsing="false" onMouseClicked="#confirmer" prefHeight="39.0" prefWidth="142.0" styleClass="buttons" stylesheets="@../Stylesheets/user_favoris.css" text="Confirmer">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btt_quitter" layoutX="344.0" layoutY="388.0" mnemonicParsing="false" onMouseClicked="#quitter" prefHeight="39.0" prefWidth="142.0" styleClass="buttons" stylesheets="@../Stylesheets/user_favoris.css" text="Quitter">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <JFXPasswordField fx:id="pass_ancien" layoutX="291.0" layoutY="200.0" prefHeight="23.0" prefWidth="207.0" />
+      <JFXPasswordField fx:id="pass_nouveaux" layoutX="289.0" layoutY="262.0" prefHeight="23.0" prefWidth="207.0" />
+      <JFXPasswordField fx:id="pass_confirmation" layoutX="291.0" layoutY="327.0" prefHeight="23.0" prefWidth="207.0" />
+   </children>
+</AnchorPane>

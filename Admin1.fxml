@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Admin1Controller">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="570.0" prefWidth="762.0" styleClass="mainFxmlClass">
+         <stylesheets>
+            <URL value="@simple_user.css" />
+         </stylesheets>
+         <children>
+            <AnchorPane prefHeight="570.0" prefWidth="228.0" style="-fx-background-color: #dee4e5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Pane prefHeight="90.0" prefWidth="228.0" style="-fx-background-color: #43646b;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="68.0" fitWidth="134.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/file.gif" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="88.0" layoutY="11.0" prefHeight="47.0" prefWidth="115.0" text="TAGFILE">
+                           <font>
+                              <Font name="Lato Black" size="26.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0" startX="0.8285714285714286">
+                                 <stops>
+                                    <Stop color="WHITE" />
+                                    <Stop color="#dd8787" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Separator layoutX="-8.0" layoutY="78.0" prefHeight="21.0" prefWidth="235.0" />
+                        <Separator layoutX="223.0" layoutY="-46.0" orientation="VERTICAL" prefHeight="615.0" prefWidth="7.0" />
+                     </children>
+                  </Pane>
+                  <JFXButton fx:id="btt_favoris" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="285.0" onMouseClicked="#afficher_favoris" prefHeight="47.0" prefWidth="188.0" text="favoris" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="285.0">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/favourite-file.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btt_vosinformation" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="243.0" onMouseClicked="#get_informations" prefHeight="47.0" prefWidth="188.0" text="vos informations" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="343.0">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Sample_User_Icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btt_deconnection" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="293.0" onMouseClicked="#Decconnection" prefHeight="47.0" prefWidth="188.0" text="Decconnection" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="393.0">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/876779.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btt_tags" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="231.0" onMouseClicked="#allUserTags" prefHeight="47.0" prefWidth="188.0" text="Tags des Utilisateurs" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="231.0">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Tags-512.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btt_utilisateurs" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="184.0" onMouseClicked="#users_list" prefHeight="47.0" prefWidth="188.0" text="Utilisateurs" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="184.0">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/32441.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <Pane layoutX="228.0" layoutY="-64.0" prefHeight="90.0" prefWidth="559.0" style="-fx-background-color: #43646b;" AnchorPane.leftAnchor="228.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="134.0" layoutX="466.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/background.jpeg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="134.0" layoutX="332.0" layoutY="-1.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/background.jpeg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="134.0" layoutX="198.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/background.jpeg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="134.0" layoutX="64.0" layoutY="-1.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/background.jpeg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="89.0" fitWidth="149.0" layoutX="-3.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/background.jpeg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="126.0" layoutX="6.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/TAG.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="txt_welcome" fill="WHITE" layoutX="196.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text text text text " wrappingWidth="368.9999849796295">
+                     <font>
+                        <Font name="Forte" size="25.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="52.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Espace Administrateur" wrappingWidth="292.9999998807907">
+                     <font>
+                        <Font name="Forte" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="root" layoutX="238.0" layoutY="101.0" prefHeight="481.0" prefWidth="559.0">
+         <children>
+            <Label layoutX="62.0" layoutY="102.0" prefHeight="31.0" prefWidth="24.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="Lato Black" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

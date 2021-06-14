@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="570.0" prefWidth="762.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Simple_userController">
+    <stylesheets>
+        <URL value="@simple_user.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="570.0" prefWidth="228.0" style="-fx-background-color: #dee4e5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="90.0" prefWidth="228.0" style="-fx-background-color: #43646b;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="68.0" fitWidth="134.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/file.gif" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="88.0" layoutY="11.0" prefHeight="47.0" prefWidth="115.0" text="TAGFILE">
+                     <font>
+                        <Font name="Lato Black" size="26.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.8285714285714286">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="#dd8787" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Separator layoutX="-8.0" layoutY="78.0" prefHeight="21.0" prefWidth="235.0" />
+                  <Separator layoutX="223.0" layoutY="-46.0" orientation="VERTICAL" prefHeight="615.0" prefWidth="7.0" />
+               </children>
+            </Pane>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="193.0" onMouseClicked="#afficher_favoris" prefHeight="47.0" prefWidth="188.0" text="favoris" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="193.0">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/favourite-file.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="243.0" onMouseClicked="#get_information" prefHeight="47.0" prefWidth="188.0" text="vos informations" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="243.0">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Sample_User_Icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="293.0" onMouseClicked="#Deconnection" prefHeight="47.0" prefWidth="188.0" text="Decconnection" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="293.0">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/876779.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="143.0" onMouseClicked="#accueil" prefHeight="47.0" prefWidth="188.0" text="Accueil" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="143.0">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/69524.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="root" layoutX="239.0" layoutY="98.0" prefHeight="481.0" prefWidth="559.0" AnchorPane.bottomAnchor="-9.0" AnchorPane.leftAnchor="239.0" AnchorPane.rightAnchor="-11.0">
+         <children>
+            <AnchorPane id="AnchorPane" layoutX="8.0" layoutY="28.0" prefHeight="481.0" prefWidth="559.0">
+               <children>
+                  <Label layoutX="40.0" layoutY="24.0" text="Pour etre mieu organiser" textFill="#08bcc9">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="237.0" layoutY="46.0" text="TAGFILE" textFill="#f89a9a">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="318.0" layoutY="68.0" text="vous permet de " textFill="#0d686f">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="14.0" layoutY="150.0" prefHeight="288.0" prefWidth="247.0" style="-fx-background-color: linear-gradient(#778899 0%, #f4f47b 100%);" styleClass="buttons" stylesheets="@../Stylesheets/user_favoris.css">
+                     <children>
+                        <ImageView fitHeight="193.0" fitWidth="235.0" layoutX="27.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/téléchargement.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="40.0" layoutY="14.0" text="Marquer vos fichier " textFill="#01484d">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="298.0" layoutY="150.0" prefHeight="288.0" prefWidth="247.0" style="-fx-background-color: linear-gradient(#778899 0%, #ffadad 100%);" styleClass="buttons" stylesheets="@../Stylesheets/user_favoris.css">
+                     <children>
+                        <ImageView fitHeight="193.0" fitWidth="235.0" layoutX="27.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/images%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="29.0" layoutY="14.0" text="Marquer des page web " textFill="#01484d">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <Pane layoutX="228.0" layoutY="-64.0" prefHeight="90.0" prefWidth="559.0" style="-fx-background-color: #43646b;" AnchorPane.leftAnchor="228.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="90.0" fitWidth="134.0" layoutX="466.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/background.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="134.0" layoutX="332.0" layoutY="-1.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/background.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="134.0" layoutX="198.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/background.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="134.0" layoutX="64.0" layoutY="-1.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/background.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="89.0" fitWidth="149.0" layoutX="-3.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/background.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="68.0" fitWidth="126.0" layoutX="6.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/TAG.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="txt_welcome" fill="WHITE" layoutX="159.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font name="Forte" size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
